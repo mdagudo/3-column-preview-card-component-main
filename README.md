@@ -41,7 +41,7 @@ I need to focus in learning Responsive Design, because it keeps being a headache
 
 ### Useful resources
 
-- [W3Schools](https://www.w3schools.com) - This helpes me every time I code!
+- [W3Schools](https://www.w3schools.com) - This helps me every time I code!
 
 ## Author
 
