@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--bg-buttons-headings);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --bg-buttons-headings: hsl(0, 0%, 95%);
+}
+
+body {
+    background-color: var(--bg-buttons-headings);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-size: 15px;
+}
+
+.container {
+    display: grid;
+    min-width: 930px;
+    min-height: 500px;
+    grid-template-areas: "sedan suv luxury";
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 10px;
+}
+
+.grid-item {
+    min-height: inherit;
+    padding: 45px 48px;
+}
+
+.grid-item.sedan {
+    background: var(--bright-orange);
+    grid-area: sedan;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.grid-item.sedan .content, .grid-item.suv .content {
+    width: 210px;
+}
+
+.grid-item.luxury .content {
+    width: 220px;
+}
+
+.grid-item.suv {
+    background: var(--dark-cyan);
+    grid-area: suv;
+}
+
+.grid-item.luxury {
+    background: var(--very-dark-cyan);
+    grid-area: luxury;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+img {
+    margin-bottom: 35px;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-size: 265%;
+}
+
+.content p {
+    color: var(--paragraphs);
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 90px;
+}
+
+button {
+    background: var(--bg-buttons-headings);
+    border-radius: 100px;
+    padding: 12px;
+    width: 140px;
+    font-size: 15px;
+    border: solid 2px var(--bg-buttons-headings);
+    transition: all 0.2s;
+}
+
+button.sedan {
+    color: var(--bright-orange);
+}
+
+button.sedan:hover {
+    cursor: pointer;
+    background: var(--bright-orange);
+    color: var(--bg-buttons-headings);
+}
+
+button.suv {
+    color: var(--dark-cyan);
+}
+
+button.suv:hover { 
+    cursor: pointer;
+    background: var(--dark-cyan);
+    color: var(--bg-buttons-headings);
+}
+
+button.luxury {
+    color: var(--very-dark-cyan);
+}
+
+button.luxury:hover{
+    cursor: pointer;
+    background: var(--very-dark-cyan);
+    color: var(--bg-buttons-headings);
+}
+
+.attribution { 
+    font-size: 11px; color: black; 
+    position: absolute;
+    bottom: 0px;
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width: 375px) {
+body {
+    width: 375px;
+    height: 1502px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    width: 290px;
+    height: 1330px;
+    min-width: 280px;
+    min-height: 590px;
+    grid-template-areas: "sedan"
+                         "suv"
+                         "luxury";
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+.grid-item {
+    min-width: inherit;
+    min-height: 300px;
+}
+
+.grid-item.sedan {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px;
+}
+
+
+.grid-item.luxury {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.content p {
+    margin-bottom: 30px;
+    font-size: 90%;
+}
+
+.grid-item.luxury .content {
+    width: 210px;
+}
+
+button {
+    position: static;
+}
+
+.attribution {
+    position: static;
+}
+
+}
+
