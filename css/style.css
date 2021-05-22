@@ -17,42 +17,52 @@
 }
 
 body {
-    background-color: var(--bg-buttons-headings);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     width: 100vw;
-    font-size: 15px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-buttons-headings);
 }
 
 .container {
     display: grid;
-    min-width: 930px;
-    min-height: 500px;
-    grid-template-areas: "sedan suv luxury";
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 10px;
+    height: auto;
+    grid-template-areas: "sedan"
+                         "suv"
+                         "luxury";
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    margin: 50px 10px;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-size: 265%;
+}
+
+img {
+    margin-bottom: 35px;
 }
 
 .grid-item {
-    min-height: inherit;
     padding: 45px 48px;
+    min-width: inherit;
+    min-height: 300px;
 }
 
 .grid-item.sedan {
     background: var(--bright-orange);
     grid-area: sedan;
+    border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
 }
 
-.grid-item.sedan .content, .grid-item.suv .content {
-    width: 210px;
-}
-
-.grid-item.luxury .content {
-    width: 220px;
+.grid-item.sedan .content, .grid-item.suv .content, .grid-item.luxury .content  {
+    width: 225px;
+    line-height: 25px;
 }
 
 .grid-item.suv {
@@ -63,26 +73,17 @@ body {
 .grid-item.luxury {
     background: var(--very-dark-cyan);
     grid-area: luxury;
-    border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-}
-
-img {
-    margin-bottom: 35px;
-}
-
-h1 {
-    font-family: 'Big Shoulders Display', cursive;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-    font-size: 265%;
+    border-bottom-left-radius: 10px;
 }
 
 .content p {
-    color: var(--paragraphs);
-    font-size: 15px;
-    line-height: 25px;
-    margin-bottom: 90px;
+    margin-bottom: 30px;
+    font-size: 90%;
+}
+
+.grid-item.luxury .content {
+    width: 210px;
 }
 
 button {
@@ -99,96 +100,80 @@ button.sedan {
     color: var(--bright-orange);
 }
 
-button.sedan:hover {
-    cursor: pointer;
-    background: var(--bright-orange);
-    color: var(--bg-buttons-headings);
-}
-
 button.suv {
     color: var(--dark-cyan);
-}
-
-button.suv:hover { 
-    cursor: pointer;
-    background: var(--dark-cyan);
-    color: var(--bg-buttons-headings);
 }
 
 button.luxury {
     color: var(--very-dark-cyan);
 }
 
-button.luxury:hover{
+button:hover {
     cursor: pointer;
-    background: var(--very-dark-cyan);
+    background-color: transparent;
     color: var(--bg-buttons-headings);
 }
 
 .attribution { 
     font-size: 11px; color: black; 
-    position: absolute;
-    bottom: 0px;
 }
 
 .attribution a { color: hsl(228, 45%, 44%); }
 
-@media (max-width: 375px) {
-body {
-    width: 375px;
-    height: 1502px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@media (min-width: 376px) {
+.container {
+   width: clamp(320px, 45%, 450px);
+}
+
+.grid-item, .content{
+    text-align: center;
+}
+
+.grid-item.sedan .content, .grid-item.suv .content, .grid-item.luxury .content {
+    width: 100%;
+}
+
+.content {
+    align-self: center;
+}
+
+}
+
+@media (min-width: 1100px) {
+    body {
+    height: 100vh;
+    font-size: 15px;
+    justify-content: center;
 }
 
 .container {
     display: grid;
-    width: 290px;
-    height: 1330px;
-    min-width: 280px;
-    min-height: 590px;
-    grid-template-areas: "sedan"
-                         "suv"
-                         "luxury";
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr;
+    width: 930px;
+    height: 500px;
+    grid-template-areas: "sedan suv luxury";
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 10px;
 }
 
 .grid-item {
-    min-width: inherit;
-    min-height: 300px;
-}
-
-.grid-item.sedan {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 0px;
-    border-top-right-radius: 10px;
-}
-
-
-.grid-item.luxury {
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+    height: inherit;
 }
 
 .content p {
-    margin-bottom: 30px;
-    font-size: 90%;
+    color: var(--paragraphs);
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 90px;
 }
 
-.grid-item.luxury .content {
-    width: 210px;
+.grid-item.sedan {
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
 }
 
-button {
-    position: static;
-}
-
-.attribution {
-    position: static;
+.grid-item.luxury {
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
 }
 
 }
-
