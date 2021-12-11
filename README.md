@@ -22,7 +22,7 @@ Users should be able to:
 
 ## My process
 
-I love building up eveything, making it the most similar to the original. I think the hardest part for me is making the entire design responsive. I'm learning while doing these so I still need more practice. 
+I loved building up eveything, making it the most similar to the original. I think the hardest part for me is making the entire design responsive. I'm learning while doing these so I still need more practice. 
 
 ### Built with
 
@@ -33,7 +33,7 @@ I love building up eveything, making it the most similar to the original. I thin
 
 ### What I learned
 
-I practiced a lot of GRID and FLEX in this challenge, because I'm just a newbie in this topics and I feel like I'm improving a lot with every challenge I complete. 
+I practiced a lot of GRID and FLEX in this challenge, because I'm just a newbie in these topics and I feel like I'm improving a lot with every challenge I complete. 
 
 ### Continued development
 
